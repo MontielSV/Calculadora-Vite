@@ -1,0 +1,75 @@
+/* Fondo general */
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor principal */
+.calculator {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  width: 360px;
+  max-width: 90%;
+}
+
+/* Pantalla */
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 30px;
+  text-align: right;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #222;
+  color: #00ffcc;
+  box-shadow: inset 0 0 8px rgba(0, 255, 204, 0.3);
+}
+
+/* Botones */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+button {
+  height: 60px;
+  font-size: 22px;
+  border: none;
+  border-radius: 12px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background-color: #666;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #888;
+}
+
+/* Botones especiales */
+button:nth-child(1) { background-color: #ff4d4d; }     /* C */
+button:nth-child(2) { background-color: #ffcc00; }     /* ÷ */
+button:nth-child(3) { background-color: #ffcc00; }     /* × */
+button:nth-child(4) { background-color: #ff4d4d; }     /* ← */
+button:nth-child(16) { background-color: #00cc66; }    /* = */
+
+.zero {
+  grid-column: span 2;
+}
